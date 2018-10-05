@@ -1,6 +1,10 @@
 import pandas as pd
 import numpy as np
+import nltk
 
-df = pd.read_csv('./user_survey.csv')
+from vaderSentiment import SentimentIntensityAnalyzer
+#analyzer = SentimentIntensityAnalyzer()
 
-print(df.head())
+#df = pd.read_csv('./interview1.csv')
+
+#print(df.head())
