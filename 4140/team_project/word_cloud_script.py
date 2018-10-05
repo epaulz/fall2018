@@ -37,7 +37,6 @@ from nltk.collocations import BigramAssocMeasures, BigramCollocationFinder
 from nltk.corpus import stopwords
 from operator import itemgetter
 
-'''
 #nltk.download('punkt')
 
 #mask = np.array(Image.open('./glc_profile.jpeg'))
@@ -68,4 +67,3 @@ wordCloud.generate_from_frequencies(word_dict)
 #wordCloud.to_file("bmw_wc.png")
 #wordCloud.to_file("benz_wc_boring.png")
 wordCloud.to_file("bmw_wc_boring.png")
-'''
