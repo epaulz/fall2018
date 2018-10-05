@@ -1,30 +1,37 @@
-Age,Gender,Ethnicity,Major,stressful_moment,overcome_stress
-22,Male,Asian,Electrical Engineer,When I wasn't understanding something for my one of my exams.,Took a short break and went back to working. 
-20,Female,Asian,Biological Sciences ,Every afternoon after classes when i sit down to see what work I have to do,"Breathe, make tea"
-21,Male,Asian,CIS/ Management ,I had to lead a discussion in one of my class classes so I was stressed prior and during that class bc I had to familiarize myself with the content ,Tried to do the related work
-21,Female,Caucasian,Animal Veterinarian Science ,Physics Class,Studying
-18,Female,Asian,Biochemistry,When i was the only one from my lab group who showed up to do the lab,"watch tv, listen to music, or rest"
-20,Male,Asian,Computer Science ,Bombed the exam ,Nothing 
-22,Male,Caucasian,Computer Information Systems,I had to demo a project for a class and I was stressed.,I try to not think about the problem and clear my mind.
-18,Male,Caucasian,Bioengineering,I was late to my Chemistry Lab because my alarm did not go off,Communicated with my TA
-20,Female,Asian,Accounting,"I felt stressed when I had an exam in less than 2 hours and I could not understand a section, which is going to be on the exam. ",I decided to get in contact with my classmate and have my classmate help me understand the concept. 
-21,Male,Asian,Computer science ,Now ,Working on the cause of stress 
-20,Female,Asian,Nursing,Medications Math Exam,Studied - forgot about it afterwards because there is nothing I can do about it now. 
-21,Male,Asian,Biology,My test,Take it
-19,Male,Caucasian,Computer Science,"During physics 2 lab. We had to do the pre-lab quiz, the entire lab, and the lab report with post lab questions in 3 hours. ",Did the work
-19,Attack helicopter ,American ,Horticultural ,Not at all,Tea
-19,Platypus,Caucasian,Computer Science,Time Crunch,Ignored it
-21,Female,Caucasian,Computer Science,When I almost didn't get a project in on time.,I turned it in on time.
-21,Male,Asian,Electrical Engineering ,When work load keeps adding up,Take 5 mins of break and think about it 
-19,Male,Caucasian,Biological Sciences,Studying for my quiz today,Taking a break every once in a while
-21,Male,Asian,Computer Engineering,Before my exam,Deep breaths to relax
-20,Male,Asian,Electrical Engineering ,When I almost forgot to submit my lab report on time. ,I realized it’s due next week. 
-20,Male,Asian,Biochemistry,Class,Netflix
-21,Male,Asian,Bioengineering,I stayed up all night doing a project for my senior design class and got zero sleep.,"I am mentally capable of pushing through the stress, but I plan on getting a lot of sleep to deal with it."
-23,Male,Asian,Medical Student,I was stressed out when my lab partner and I realized that we don’t have enough time to complete lab.,I am going to the lab later tonight to finish the lab.
-21,Male,Asian,Computer Engineering,Test coming in couple days,Divert my mind for some time by watching tv and playing game.
-20,Female,Indian,Biological Sciences,When I don't get enough sleep,"Deep breaths, meditate, and lots of coffee"
-24,Female,Caucasian and African American,Doctorate of Veterinary Medicine,Class,Went to the pool
-20,Male,Caucasian,Computer science,Doing homework and looking at my incredibly full calendar,Just sitting down and knocking out assignments
-19,Female,American Indian,Bioengineering ,When I had to walk to class and be on time for the iclicker check that happens at the beginning ,Walked faster 
-18,Female,Asian,Economics/Management ,More assignments kept piling on as I went through my classes ,I plan on making a plan to get them done. 
+timestamp,name,age,gender,ethnicity,major,day_score,stressful_moment,overcome_stress,school_hours,relaxing_hours,social_life_score,hangout_hours,helpful
+2018/10/04 4:42:45 PM AST,Yash Patel,22,Male,Asian,Electrical Engineer,4,When I wasn't understanding something for my one of my exams.,Took a short break and went back to working. ,4-5 hours,2 hours,2,5,No
+2018/10/04 4:48:51 PM AST,Hannah Patel,20,Female,Asian,Biological Sciences ,3,Every afternoon after classes when i sit down to see what work I have to do,"Breathe, make tea",6,4,4,4,Yes
+2018/10/04 4:50:05 PM AST,Parth Patel,21,Male,Asian,CIS/ Management ,3,I had to lead a discussion in one of my class classes so I was stressed prior and during that class bc I had to familiarize myself with the content ,Tried to do the related work,5-Mar,5-Mar,4,5,No
+2018/10/04 4:52:46 PM AST,Dakota Harsany ,21,Female,Caucasian,Animal Veterinarian Science ,2,Physics Class,Studying,8 hours,3 hours,2,1,No
+2018/10/04 4:55:48 PM AST,Lakshmi Das,18,Female,Asian,Biochemistry,4,When i was the only one from my lab group who showed up to do the lab,"watch tv, listen to music, or rest",7-Jun,3-Feb,4,3,Yes
+2018/10/04 4:59:01 PM AST,Ayush,20,Male,Asian,Computer Science ,2,Bombed the exam ,Nothing ,5,5,3,3,Yes
+2018/10/04 5:03:40 PM AST,Jacob Kreider,22,Male,Caucasian,Computer Information Systems,2,I had to demo a project for a class and I was stressed.,I try to not think about the problem and clear my mind.,40 hours,25 hours,4,4,Yes
+2018/10/04 5:05:11 PM AST,Evan Schneider,18,Male,Caucasian,Bioengineering,4,I was late to my Chemistry Lab because my alarm did not go off,Communicated with my TA,3,4,4,3,Yes
+2018/10/04 5:14:38 PM AST,Tanvi Patel,20,Female,Asian,Accounting,5,"I felt stressed when I had an exam in less than 2 hours and I could not understand a section, which is going to be on the exam. ",I decided to get in contact with my classmate and have my classmate help me understand the concept. ,8 to 9,3 to 4,4,4,Yes
+2018/10/04 5:32:52 PM AST,Kevin ,21,Male,Asian,Computer science ,5,Now ,Working on the cause of stress ,16,0,2,1,Yes
+2018/10/04 5:51:34 PM AST,Nidhi Patel,20,Female,Asian,Nursing,3,Medications Math Exam,Studied - forgot about it afterwards because there is nothing I can do about it now. ,12,2,3,2,No
+2018/10/04 5:53:33 PM AST,Sai,21,Male,Asian,Biology,4,My test,Take it,15,20,4,5,No
+2018/10/04 6:02:49 PM AST,Kaleb Chestnut,19,Male,Caucasian,Computer Science,2,"During physics 2 lab. We had to do the pre-lab quiz, the entire lab, and the lab report with post lab questions in 3 hours. ",Did the work,7-Apr,3-Jan,3,4,Yes
+2018/10/04 6:06:50 PM AST,Tristen Clark,19,Attack helicopter ,American ,Horticultural ,4,Not at all,Tea,12,12,3,4,No
+2018/10/04 6:07:15 PM AST,Nathan Binkley,19,Platypus,Caucasian,Computer Science,3,Time Crunch,Ignored it,5,2,2,2,No
+2018/10/04 6:11:19 PM AST,Madison Maddox,21,Female,Caucasian,Computer Science,4,When I almost didn't get a project in on time.,I turned it in on time.,"15 (weekdays), 8 (weekends)","2 ( weekdays), 7 (weekends)",4,4,No
+2018/10/04 6:13:07 PM AST,Jatinkumar,21,Male,Asian,Electrical Engineering ,4,When work load keeps adding up,Take 5 mins of break and think about it ,3 to 4 hours ,2 to 3 hours ,3,5,No
+2018/10/04 6:24:25 PM AST,Darren Ioos,19,Male,Caucasian,Biological Sciences,4,Studying for my quiz today,Taking a break every once in a while,5 out of class hours,1-2 hours,4,5,Yes
+2018/10/04 7:06:00 PM AST,Sagar Patadia,21,Male,Asian,Computer Engineering,5,Before my exam,Deep breaths to relax,4+,2-Jan,4,2,No
+2018/10/04 8:27:33 PM AST,Ankit Joshi,20,Male,Asian,Electrical Engineering ,4,When I almost forgot to submit my lab report on time. ,I realized it’s due next week. ,3,2,4,3,Yes
+2018/10/04 8:42:45 PM AST,Hemani,20,Male,Asian,Biochemistry,4,Class,Netflix,10,2,4,5,Yes
+2018/10/04 9:07:40 PM AST,Shawn Patel,21,Male,Asian,Bioengineering,3,I stayed up all night doing a project for my senior design class and got zero sleep.,"I am mentally capable of pushing through the stress, but I plan on getting a lot of sleep to deal with it.",12ish,2,5,5,Yes
+2018/10/04 9:52:09 PM AST,Tushar Patel,23,Male,Asian,Medical Student,3,I was stressed out when my lab partner and I realized that we don’t have enough time to complete lab.,I am going to the lab later tonight to finish the lab.,15,3,2,2,Yes
+2018/10/04 10:02:52 PM AST,Nishant Patel,21,Male,Asian,Computer Engineering,3,Test coming in couple days,Divert my mind for some time by watching tv and playing game.,3hr,2hr,1,1,No
+2018/10/04 10:15:41 PM AST,Mansi Joglekar,20,Female,Indian,Biological Sciences,3,When I don't get enough sleep,"Deep breaths, meditate, and lots of coffee",8,2,3,4,Yes
+2018/10/04 11:39:50 PM AST,Alex Ballou,24,Female,Caucasian and African American,Doctorate of Veterinary Medicine,5,Class,Went to the pool,10,2,5,4,Yes
+2018/10/05 12:41:25 AM AST,John Hollowell,20,Male,Caucasian,Computer science,2,Doing homework and looking at my incredibly full calendar,Just sitting down and knocking out assignments,3,3,4,3,No
+2018/10/05 9:19:13 AM AST,Aparna Mahendranath ,19,Female,American Indian,Bioengineering ,4,When I had to walk to class and be on time for the iclicker check that happens at the beginning ,Walked faster ,7,1,4,2,Yes
+2018/10/05 9:21:12 AM AST,Likhita Kavuru,18,Female,Asian,Economics/Management ,4,More assignments kept piling on as I went through my classes ,I plan on making a plan to get them done. ,6,2,5,3,Yes
+2018/10/05 11:15:33 AM AST,Lauren Kochanowicz ,21,Female,Caucasian,Econonics,3,When I realized I have 3 exams next week,Procrastinating ,2,4,5,3,No
+2018/10/05 11:18:01 AM AST,Alex,21,Male,Caucasian,Business Management,5,Wake up for class. ,Breathe ,5,2,4,4,No
+2018/10/05 11:33:43 AM AST,Sarah,20,Female,Hispanic or Latino,Econ ,4,"This morning, I woke up and was sick!",I went and got a Starbucks tea! ,5,3,3,3,No
+2018/10/05 12:06:10 PM AST,Jackson Crabtree,20,Male,Caucasian,Business Management,5,When I was quickly taking notes in Entrepreneurship class,I patiently waited for clas to end,6,4,5,3,No
+2018/10/05 12:07:47 PM AST,Allison Killinger,19,Female,Caucasian,Graphic Communications,4,Going through potential internship opportunities,Trying to prepare the best I can and reassuring myself that everything's going to work out,4-Mar,2-Jan,4,2,Yes
+2018/10/05 12:09:00 PM AST,Tate Fowler,19,Male,Caucasian,World Cinema,4,Stressed about getting my World Literaure homework done,Gonna complete it before 5 ,2 or 3 hours,1 hour,4,4,Yes
+2018/10/05 12:09:07 PM AST,Caroline Kacsur,19,Female,Caucasian,Architecture,4,Having a lot of errands to get done before having to drive to Spartanburg for an architecture trip. ,Got these errands done as early as possible. ,10,3,4,3,Yes
