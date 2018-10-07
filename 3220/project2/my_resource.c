@@ -13,6 +13,7 @@
 #define THREADS 20
 #define RESOURCES 4
 
+pthread_mutex_t lock;
 
 // ---------------------
 // -- resource object --
@@ -168,6 +169,7 @@ int resource_allocate( struct resource_type_tag *self, int tid ){
     if( resource_check( self ) )          // signature check
         resource_error( 7 );
 
+	pthread_mutex_lock(&lock);
     // assertion before allocating: self->available_count != 0
 
     rid = 0;                              // initialize search index
@@ -196,6 +198,8 @@ void resource_release( struct resource_type_tag *self, int tid, int rid ){
     self->status[rid] = 0;                // mark this entry as available
     self->owner[rid] = -1;                // reset ownership
     self->available_count++;              // incr count of available resources
+	
+	pthread_mutex_unlock(&lock);
 
 }
 
@@ -276,6 +280,11 @@ int main(int argc, char **argv){
 
     (resource_1->print)( resource_1 );
 
+	if(pthread_mutex_init(&lock, NULL) != 0){
+		printf("\n mutex init has failed\n");
+		return 1;
+	}
+	
     for( i = 0; i < THREADS; i++ ){
         args[i].rp = resource_1;
         args[i].id = i;
