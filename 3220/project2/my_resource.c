@@ -166,10 +166,11 @@ void resource_reclaim( resource_t *r ){
 int resource_allocate( struct resource_type_tag *self, int tid ){
     int rid;
 
+	pthread_mutex_lock(&lock);
+	
     if( resource_check( self ) )          // signature check
         resource_error( 7 );
 
-	pthread_mutex_lock(&lock);
     // assertion before allocating: self->available_count != 0
 
     rid = 0;                              // initialize search index
@@ -182,7 +183,7 @@ int resource_allocate( struct resource_type_tag *self, int tid ){
     self->status[rid] = 1;                // mark this entry as in use
     self->owner[rid] = tid;               // record which thread has it
     self->available_count--;              // decr count of available resources
-
+	
     return rid;
 }
 
