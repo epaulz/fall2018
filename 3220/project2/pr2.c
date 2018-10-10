@@ -1,7 +1,27 @@
-// CPSC/ECE 3220 summer 2018 resource allocation code
+// Programmer(s):  Eric Paulz (epaulz) & Gabriel Ballou (gballou)
 //
-// compile with "gcc -Wall resource.c -pthread"
-// run with "./a.out" or "valgrind --tool=helgrind ./a.out"
+// In the design of this program, I/we have followed the five steps
+//   listed in section 5.5.1 of the textbook.
+//
+// The structure of the program is consistent with the best practices
+//   listed in section 5.5.2 of the textbook.
+// - Accesses to resource state variables and synchronization variables
+//   are only made in the shared object methods, and not in the code
+//   that uses resource objects. Although the program is written in C,
+//   the object-oriented interface is:
+//   * Constructor method is resource_init().
+//   * Destructor method is resource_reclaim().
+//   * Public methods are resource_allocate(), resource_release(),
+//     and resource_print().
+// - A lock is used to synchronize all accesses to the state variables,
+//   and a condition variable is used to cause threads to wait on
+//   resource availability.
+// - The lock is acquired at the beginning of methods and released
+//   before returns.
+// - The lock is held whenever a condition variable operation (wait or
+//   signal) is called.
+// - The wait operation on a condition variable is done inside a loop.
+// - sleep() is not used in the object methods for synchronization.
 
 
 #include <pthread.h>
@@ -9,13 +29,8 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-
 #define THREADS 20
 #define RESOURCES 4
-
-// mine
-//pthread_mutex_t lock;
-//pthread_cond_t cv;
 
 
 // ---------------------
@@ -26,25 +41,22 @@ typedef struct resource_type_tag{
 
     // state variables
 
-    int type;             // field to distinguish resource type
-    int total_count;      // total number of resources of this type
-    int available_count;  // number of currently available resources
-    char *status;         // pointer to status vector on heap; encoding:
-                          //     0 = available, 1 = in use
-    char *owner;          // pointer to owner vector on heap; encoding:
-                          //     0 to 127 are valid owner ids,
-                          //     -1 is invalid owner id
-    int signature;        // signature for run-time type checking; put
-                          //     after a vector to catch some overflows
+    int type;                     // field to distinguish resource type
+    int total_count;          // total number of resources of this type
+    int available_count;   // number of currently available resources
+    char *status;             // pointer to status vector on heap; encoding:
+                                      //     0 = available, 1 = in use
+    char *owner;             // pointer to owner vector on heap; encoding:
+                                      //     0 to 127 are valid owner ids,
+                                      //     -1 is invalid owner id
+    int signature;             // signature for run-time type checking; put
+                                      //     after a vector to catch some overflows
 
     // synchronization variables
-
-	 // need to add them here
 	 pthread_mutex_t lock;
 	 pthread_cond_t cv;
 
     // methods other than init (constructor) and reclaim (destructor)
-
     int (*allocate)( struct resource_type_tag *self, int tid );
     void (*release)( struct resource_type_tag *self, int tid, int rid );
     void (*print)( struct resource_type_tag *self );
@@ -136,11 +148,11 @@ resource_t * resource_init( int type, int total ){
 
     // call to pthread_mutex_init() with rc as return code
     rc = pthread_mutex_init(&(r->lock), NULL);
-	 if( rc != 0 ) resource_error( 3 );
+	if( rc != 0 ) resource_error( 3 );
 
     // call to pthread_cond_init() with rc as return code
     rc = pthread_cond_init(&(r->cv), NULL);
-	 if( rc != 0 ) resource_error( 4 );
+	if( rc != 0 ) resource_error( 4 );
 
     r->print = &resource_print;           // set method pointers
     r->allocate = &resource_allocate;
@@ -199,7 +211,7 @@ int resource_allocate( struct resource_type_tag *self, int tid ){
     self->owner[rid] = tid;               // record which thread has it
     self->available_count--;              // decr count of available resources
 
-	 pthread_mutex_unlock(&(self->lock));
+	pthread_mutex_unlock(&(self->lock));
 	
     return rid;
 }
@@ -240,7 +252,7 @@ void resource_print( struct resource_type_tag *self ){
     }
     printf("-------------------------------\n");
 
-	 pthread_mutex_unlock(&(self->lock));
+	pthread_mutex_unlock(&(self->lock));
 }
 
 
