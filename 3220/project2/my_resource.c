@@ -13,7 +13,10 @@
 #define THREADS 20
 #define RESOURCES 4
 
-pthread_mutex_t lock;
+// mine
+//pthread_mutex_t lock;
+//pthread_cond_t cv;
+
 
 // ---------------------
 // -- resource object --
@@ -36,7 +39,9 @@ typedef struct resource_type_tag{
 
     // synchronization variables
 
-	// need to add them here
+	 // need to add them here
+	 pthread_mutex_t lock;
+	 pthread_cond_t cv;
 
     // methods other than init (constructor) and reclaim (destructor)
 
@@ -130,10 +135,12 @@ resource_t * resource_init( int type, int total ){
     r->signature = 0x1E5041CE;
 
     // call to pthread_mutex_init() with rc as return code
-    // if( rc != 0 ) resource_error( 3 );
+    rc = pthread_mutex_init(&(r->lock), NULL);
+	 if( rc != 0 ) resource_error( 3 );
 
     // call to pthread_cond_init() with rc as return code
-    // if( rc != 0 ) resource_error( 4 );
+    rc = pthread_cond_init(&(r->cv), NULL);
+	 if( rc != 0 ) resource_error( 4 );
 
     r->print = &resource_print;           // set method pointers
     r->allocate = &resource_allocate;
@@ -151,8 +158,13 @@ void resource_reclaim( resource_t *r ){
     //   in this function
 
     if( resource_check( r ) ) resource_error( 5 );
-    // call to pthread_cond_destroy()
-    // call to pthread_mutex_destroy()
+    
+	 // call to pthread_cond_destroy()
+	 pthread_cond_destroy(&(r->cv));
+    
+	 // call to pthread_mutex_destroy()
+	 pthread_mutex_destroy(&(r->lock));
+
     free( r->owner );
     free( r->status );
     free( r );
@@ -164,14 +176,17 @@ void resource_reclaim( resource_t *r ){
   // need to add synchronization operations as appropriate
 
 int resource_allocate( struct resource_type_tag *self, int tid ){
-    int rid;
+	 pthread_mutex_lock(&(self->lock));
 
-	pthread_mutex_lock(&lock);
-	
+	 int rid;
+		
     if( resource_check( self ) )          // signature check
         resource_error( 7 );
 
     // assertion before allocating: self->available_count != 0
+	 while(self->available_count == 0){
+		 pthread_cond_wait(&(self->cv), &(self->lock));
+	 }
 
     rid = 0;                              // initialize search index
     self->status[self->total_count] = 0;  // extra entry is always available
@@ -183,12 +198,15 @@ int resource_allocate( struct resource_type_tag *self, int tid ){
     self->status[rid] = 1;                // mark this entry as in use
     self->owner[rid] = tid;               // record which thread has it
     self->available_count--;              // decr count of available resources
+
+	 pthread_mutex_unlock(&(self->lock));
 	
     return rid;
 }
 
 void resource_release( struct resource_type_tag *self, int tid, int rid ){
-
+	 pthread_mutex_lock(&(self->lock));
+	
     if( resource_check( self ) )          // signature check
         resource_error( 9 );
     if( rid >= self->total_count)         // bounds check of argument
@@ -200,12 +218,18 @@ void resource_release( struct resource_type_tag *self, int tid, int rid ){
     self->owner[rid] = -1;                // reset ownership
     self->available_count++;              // incr count of available resources
 	
-	pthread_mutex_unlock(&lock);
-
+	 if(self->available_count != 0){
+		 pthread_cond_signal(&(self->cv));
+ 	 }
+	 
+	 pthread_mutex_unlock(&(self->lock));
+	
 }
 
 void resource_print( struct resource_type_tag *self ){
-    int i;
+    pthread_mutex_lock(&(self->lock));
+
+	 int i;
 
     if( resource_check( self ) )          // signature check
         resource_error( 6 );
@@ -216,6 +240,7 @@ void resource_print( struct resource_type_tag *self ){
     }
     printf("-------------------------------\n");
 
+	 pthread_mutex_unlock(&(self->lock));
 }
 
 
@@ -266,7 +291,6 @@ void *observer( void *ap ){
 }
 
 
-
 // --------------------------------------------
 // -- test driver with one resource instance --
 // --------------------------------------------
@@ -281,11 +305,6 @@ int main(int argc, char **argv){
 
     (resource_1->print)( resource_1 );
 
-	if(pthread_mutex_init(&lock, NULL) != 0){
-		printf("\n mutex init has failed\n");
-		return 1;
-	}
-	
     for( i = 0; i < THREADS; i++ ){
         args[i].rp = resource_1;
         args[i].id = i;
@@ -316,3 +335,4 @@ int main(int argc, char **argv){
 
     return 0;
 }
+

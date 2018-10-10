@@ -261,7 +261,6 @@ void *observer( void *ap ){
 }
 
 
-
 // --------------------------------------------
 // -- test driver with one resource instance --
 // --------------------------------------------
@@ -306,3 +305,4 @@ int main(int argc, char **argv){
 
     return 0;
 }
+
