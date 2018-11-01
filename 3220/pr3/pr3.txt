@@ -1,0 +1,53 @@
+Due:  November 5, 2018 (by 11:55 pm)
+
+Submit your work as instructed in this document.
+
+Objective: Applied use of pthreads on Palmetto cluster
+
+Background:
+
+Many modern operating systems now provide features for a process to contain multiple threads of control. In the class, we have introduced many concepts associated with multithreaded computer systems, including different multithreading models and threading issues. 
+
+Programming Task:
+
+You will implement multithreading edge detection with the Sobel operator. The Sobel operator is an image processing algorithm for edge detection in an image. Edge detection in an image processing involves tracing the boundaries between regions in an image. An edge occurs in an image when the gradient is greatest and the Sobel operator makes use of this fact to find edges. The Sobel operator calculates the gradient of each pixel by convolving  the image with a pair of 3 by 3 matrices. The convolution will estimate the gradient of every pixel in both horizontal and vertical direction, and their sum will be the final gradient.
+
+The two matrices are
+
+            Sobelx   =         1          0          -1
+
+                                    2          0          -2        
+
+                                    1          0          -1
+
+ 
+
+            Sobely  =         1          2          1
+
+                                    0          0          0
+
+                                   -1        -2         -1
+
+ 
+
+If Gx and Gy are the respective gradient in horizontal and vertical direction, then the total gradient is
+
+                        G = SQRT ( Gx x Gx + Gy x Gy )
+
+The repository contains source code to read 8-bit gray uncompressed bitmap image file (cscbitmap.cppPreview the document, cscbitmap.hPreview the document), and main.cppPreview the document, including a function that implements the Sobel operator. The provided source files can read the bitmap file, apply the Sobel operator to every pixel in sequential manner, and save the output bitmap image as 1.bmp.
+
+You will reimplement part of the source code such that the Sobel operator is applied to the input image using multiple threads, such that each thread only operates on a region or block of input pixels, processes those pixels, and saves the pixels gradient value.
+
+The number of threads should be passed as the second input argument to the executable, input filename being the first argument, such that you should be able to conduct performance analysis with varying number of threads as input argument.
+
+Submitting Your Work:
+
+All files you submit must have a header with the following:
+
+Name:                          Your Name
+
+File:                             filename
+
+Instructor:                    Brygg Ullmer
+
+Class and section:       3220

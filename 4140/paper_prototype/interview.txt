@@ -1,0 +1,29 @@
+How many years of experience do you have working with software tools in vet clinics?
+6 years
+
+On average, do you feel that the software you've used was user friendly and/or intuitive?
+No.  It tends to overly complicated, requiring training and instructions.
+
+What is some of the key functionality needed in these systems?
+Database to store patient information.
+Ability to search patients by name
+  - make a box that stays with patient name, owner name, animal species, breed, m/f, neutered/spayed?, microchip id
+Create new patients
+Schedule/cancel appointments
+Check out
+
+What would you say is the number one flaw shared between the systems that you have use in the past?
+Information overload.  Too many options on one screen at any given time.
+
+
+
+
+
+Screens
+1. Login with employee ID number and password
+2. Patient
+   Over the Counter (food, toys, treats, etc.)
+   Check out
+   Appointments (pull up appointments for that day, click person's name, check them in or cancel appt. from there via right click)
+   Calendar
+

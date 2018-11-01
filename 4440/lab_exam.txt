@@ -1,0 +1,16 @@
+1. Which region are you in?
+2. What is the CIDR of the default VPC? (VPC->Your VPCs->IPv4 CIDR)
+3. What is the CIDR of Lab VPC?
+4. How many IP addresses are available? (2^16 - 5)(5 reserved by Amazon)
+5. How many IP addresses represented? (2^16)
+6. Lowest IP address for Lab VPC? (10.1.0.0)
+7. Highest IP address available? (10.1.255.255)
+8. How many public subnets in Lab VPC?
+9. What makes it public? (route table routed to gateway 0.0.0.0/0)
+10. How many AZs in use? (scroll to view AZs)
+11. Any active instances running now? (services->EC2)
+12. Instance type?
+13. What AZ?
+14. Public IP?
+15. How to look at user data? (actions->instance settings->user data) (**must stop instance to edit user data)
+16. Does the instance have storage (EBS) attached to it? (EBS->volumes->attachment information)
