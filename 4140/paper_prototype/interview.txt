@@ -1,8 +1,10 @@
 How many years of experience do you have working with software tools in vet clinics?
-6 years
+5+ years.
+
 
 On average, do you feel that the software you've used was user friendly and/or intuitive?
 No.  It tends to overly complicated, requiring training and instructions.
+
 
 What is some of the key functionality needed in these systems?
 Database to store patient information.
@@ -12,10 +14,32 @@ Create new patients
 Schedule/cancel appointments
 Check out
 
+
 What would you say is the number one flaw shared between the systems that you have use in the past?
 Information overload.  Too many options on one screen at any given time.
 
 
+On average, how many hours per day does an employee of a vet clinic spend on a computer?
+They would be on a computer consistently throughout their shift, excluding breaks.
+
+
+Would you like to see the software be adaptable to smartphones/tablets, or is it needed strictly for a desktop computer?
+A tablet application would be very helpful.
+
+
+In your opinion, is it more important for this type of software to be visually appealing or functional?
+Functionality is most essential, but a well defined and consistent color scheme would make it easier to navigate the screens.
+
+
+Any other brief comments about design for a better vet clinic software?
+It's important that the program flows well, and that you are able to navigate efficiently throughout it.
+You should be able to easily get to where you need to get no matter where you currently are in the software.
+
+
+User friendly
+Organization
+Color scheme
+Functionality
 
 
 
