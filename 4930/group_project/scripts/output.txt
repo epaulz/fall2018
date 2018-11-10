@@ -1,0 +1,84 @@
+Running 'bitflips.py'...
+
+Collecting dates and phases...
+
+Calculating single & double bit-flip errors...
+
+
+====RESULTS====
+
+phase09:
+	Total Single Bit-flip Errors = 763
+	Total Double Bit-flip Errors = 13298
+
+
+phase18a:
+	Total Single Bit-flip Errors = 0
+	Total Double Bit-flip Errors = 0
+
+
+phase17:
+	Total Single Bit-flip Errors = 14
+	Total Double Bit-flip Errors = 106
+
+
+phase18b:
+	Total Single Bit-flip Errors = 1109
+	Total Double Bit-flip Errors = 0
+
+
+phase14:
+	Total Single Bit-flip Errors = 918702
+	Total Double Bit-flip Errors = 0
+
+
+phase13:
+	Total Single Bit-flip Errors = 2745725
+	Total Double Bit-flip Errors = 0
+
+
+phase10:
+	Total Single Bit-flip Errors = 1308
+	Total Double Bit-flip Errors = 327
+
+
+phase18c:
+	Total Single Bit-flip Errors = 0
+	Total Double Bit-flip Errors = 0
+
+
+phase11a:
+	Total Single Bit-flip Errors = 381413
+	Total Double Bit-flip Errors = 428
+
+
+phase12:
+	Total Single Bit-flip Errors = 3916200
+	Total Double Bit-flip Errors = 0
+
+
+phase07b:
+	Total Single Bit-flip Errors = 224
+	Total Double Bit-flip Errors = 0
+
+
+phase16:
+	Total Single Bit-flip Errors = 1821066175813
+	Total Double Bit-flip Errors = 6678
+
+
+phase15:
+	Total Single Bit-flip Errors = 23956
+	Total Double Bit-flip Errors = 0
+
+
+phase08a:
+	Total Single Bit-flip Errors = 52827669321
+	Total Double Bit-flip Errors = 0
+
+
+phase08b:
+	Total Single Bit-flip Errors = 893724
+	Total Double Bit-flip Errors = 0
+
+
