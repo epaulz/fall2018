@@ -1,0 +1,105 @@
+
+==============NVSMI LOG==============
+
+Timestamp                           : Fri Jun 15 06:00:01 2018
+Driver Version                      : 384.98
+
+Attached GPUs                       : 2
+GPU 00000000:02:00.0
+        Replays since reset         : 0
+    Ecc Mode
+        Current                     : Enabled
+        Pending                     : Enabled
+    ECC Errors
+        Volatile
+            Single Bit            
+                Device Memory       : 0
+                Register File       : 0
+                L1 Cache            : N/A
+                L2 Cache            : 0
+                Texture Memory      : 0
+                Texture Shared      : 0
+                CBU                 : N/A
+                Total               : 0
+            Double Bit            
+                Device Memory       : 0
+                Register File       : 0
+                L1 Cache            : N/A
+                L2 Cache            : 0
+                Texture Memory      : 0
+                Texture Shared      : 0
+                CBU                 : N/A
+                Total               : 0
+        Aggregate
+            Single Bit            
+                Device Memory       : 0
+                Register File       : 0
+                L1 Cache            : N/A
+                L2 Cache            : 0
+                Texture Memory      : 0
+                Texture Shared      : 0
+                CBU                 : N/A
+                Total               : 0
+            Double Bit            
+                Device Memory       : 63
+                Register File       : 0
+                L1 Cache            : N/A
+                L2 Cache            : 0
+                Texture Memory      : 0
+                Texture Shared      : 0
+                CBU                 : N/A
+                Total               : 63
+    Retired Pages
+        Single Bit ECC              : 0
+        Double Bit ECC              : 4
+        Pending                     : No
+
+GPU 00000000:82:00.0
+        Replays since reset         : 0
+    Ecc Mode
+        Current                     : Enabled
+        Pending                     : Enabled
+    ECC Errors
+        Volatile
+            Single Bit            
+                Device Memory       : 0
+                Register File       : 0
+                L1 Cache            : N/A
+                L2 Cache            : 0
+                Texture Memory      : 0
+                Texture Shared      : 0
+                CBU                 : N/A
+                Total               : 0
+            Double Bit            
+                Device Memory       : 0
+                Register File       : 0
+                L1 Cache            : N/A
+                L2 Cache            : 0
+                Texture Memory      : 0
+                Texture Shared      : 0
+                CBU                 : N/A
+                Total               : 0
+        Aggregate
+            Single Bit            
+                Device Memory       : 0
+                Register File       : 0
+                L1 Cache            : N/A
+                L2 Cache            : 0
+                Texture Memory      : 0
+                Texture Shared      : 0
+                CBU                 : N/A
+                Total               : 0
+            Double Bit            
+                Device Memory       : 0
+                Register File       : 0
+                L1 Cache            : N/A
+                L2 Cache            : 0
+                Texture Memory      : 0
+                Texture Shared      : 0
+                CBU                 : N/A
+                Total               : 0
+    Retired Pages
+        Single Bit ECC              : 0
+        Double Bit ECC              : 0
+        Pending                     : No
+
