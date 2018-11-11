@@ -10,6 +10,8 @@
 #include <math.h>
 #include "cscbitmap.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <pthread.h>
 
 int sobel_x[3][3] = { { 1, 0,-1},
                       { 2, 0,-2},
@@ -34,9 +36,9 @@ int main(int argc, char *argv[])
 {
     //QCoreApplication a(argc, argv);
     char* bmpFile;
-    if( argc < 2)
+    if( argc < 3)
       {
-	printf("Filename argument required!\n");
+	printf("Useage: <executable> <input filename> <thread count>\n");
 	return 0;
       }
     else
@@ -50,6 +52,7 @@ int main(int argc, char *argv[])
     image_sobeled.resize(image->bmpSize, 255);
     inData = data;
 
+    int numThreads = atoi(argv[2]);
     findEdge(image->bmpWidth, image->bmpHeight);
 
     /// Write image data passed as argument to a bitmap file
@@ -75,7 +78,7 @@ void* findEdge(const unsigned int w,
 
     // The FOR loop apply Sobel operator
     // to bitmap image data in per-pixel level.
-    for(unsigned int y = 1; y < h-1; ++y)
+    for(unsigned int y = 1; y < (h/2)-1; ++y)
         for(unsigned int x = 1; x < w-1; ++x)
         {
             // Compute gradient in +ve x direction
