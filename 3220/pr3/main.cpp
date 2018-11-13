@@ -1,7 +1,7 @@
 //Name:         Eric Paulz
 //Instructor:   Brygg Ullmer
-//Class:        3220
-//Date:         11-12-2018
+//Class:          3220
+//Date:           11-12-2018
 
 // Base code by Bidur Bohara (LSU) in collaboration with Brygg Ullmer
 
