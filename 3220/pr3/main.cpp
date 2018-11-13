@@ -1,7 +1,7 @@
 //Name:         Eric Paulz
 //Instructor:   Brygg Ullmer
-//Class:          3220
-//Date:           11-12-2018
+//Class:        3220
+//Date:         11-12-2018
 
 // Base code by Bidur Bohara (LSU) in collaboration with Brygg Ullmer
 
@@ -12,6 +12,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <pthread.h>
+
+pthread_mutex_t lock;
 
 // structure to hold arguments for pthread_create()
 struct arg_struct{
@@ -45,12 +47,12 @@ int main(int argc, char *argv[])
     //QCoreApplication a(argc, argv);
     char* bmpFile;
     if( argc < 3) // changed number of required arguments
-      {
-	printf("Usage: <executable> <input filename> <thread count>\n");
-	return 0;
-      }
+    {
+        printf("Usage: <executable> <input filename> <thread count>\n");
+        return 0;
+    }
     else
-      bmpFile = argv[1]; 
+        bmpFile = argv[1]; 
     
     /// Open and read bmp file.
     Bitmap *image = new Bitmap();
@@ -67,25 +69,26 @@ int main(int argc, char *argv[])
     arg_struct *args;
     args = (arg_struct *)malloc(sizeof(arg_struct));
 
+
     // loop to create threads and call findEdge()
     // pass in height/width assignments for each thread
     std::vector<pthread_t> tid(numThreads);
-    int start = 0, end = split;
+    int start, end;
     for(int i=0; i < numThreads; i++){
-	args->w = image->bmpWidth;
-	args->start_h = start;
-	args->end_h = end;
-	args->threadID = i;
+		args->w = image->bmpWidth;
+	   args->start_h = start;
+	   args->end_h = end;
+	   args->threadID = i;
 
-        pthread_create(&tid[i], NULL, findEdge, (void *)args);
+      pthread_create(&tid[i], NULL, findEdge, (void *)args);
 	
-	start = end;
-	end += split;
+	   start = end;
+	   end += split;
     } 
     
     // join threads back
     for(int i=0; i < numThreads; i++){
-	pthread_join(tid[i], NULL);
+	   pthread_join(tid[i], NULL);
     }
 
     /// Write image data passed as argument to a bitmap file
@@ -106,19 +109,21 @@ int main(int argc, char *argv[])
 /// and can process on a region/group of pixels
 void* findEdge(void* args)
 {
+	 pthread_mutex_lock(&lock);
+
     arg_struct *b;
     b=(arg_struct*)args;
 
-    printf("Running on Thread #%d...\n",b->threadID);
-
-    int gradient_X = 0;
+//  printf("Running on Thread #%d...\n",b->threadID);
+    
+	 int gradient_X = 0;
     int gradient_Y = 0;
     int value = 0;
 
     // The FOR loop apply Sobel operator
     // to bitmap image data in per-pixel level.
-    for(unsigned int y = b->start_h; y < b->end_h-1; ++y)
-        for(unsigned int x = 1; x < b->w-1; ++x)
+    for(unsigned int y = b->start_h; y < b->end_h; y++)
+        for(unsigned int x = 1; x < b->w; x++)
         {
             // Compute gradient in +ve x direction
             gradient_X = sobel_x[0][0] * inData[ (x-1) + (y-1) * b->w ]
@@ -146,6 +151,9 @@ void* findEdge(void* args)
                                     gradient_Y * gradient_Y));
             image_sobeled[ x + y * b->w ] = 255 - value;
         }
+
+    pthread_mutex_unlock(&lock);
+
     // Visual Studio requires this to be present; and should not 
     // cause issues for other compilers. 
     // Thanks to Thomas Peters.
