@@ -1,8 +1,3 @@
-//Name:         Eric Paulz
-//Instructor:   Brygg Ullmer
-//Class:          3220
-//Date:           11-12-2018
-
 // Code by Bidur Bohara (LSU) in collaboration with Brygg Ullmer
 
 #ifndef BITMAP_H

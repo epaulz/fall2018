@@ -1,8 +1,3 @@
-#Name:         Eric Paulz
-#Instructor:   Brygg Ullmer
-#Class:          3220
-#Date:           11-12-2018
-
 make: main.cpp cscbitmap.cpp
 	g++ main.cpp cscbitmap.cpp -pthread
 
