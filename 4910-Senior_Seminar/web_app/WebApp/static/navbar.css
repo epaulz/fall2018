@@ -1,0 +1,27 @@
+.navb {
+    width: 80%;
+    margin-top: 200px;
+    margin-right: 200px;
+    margin-bottom: 200px;
+    margin-left: 200px;
+}
+ul .nav {
+    list-style-type: none;
+    padding: 20px;
+    width: 200px;
+    background-color: #999999;
+}
+li a.nava {
+    display: inline-block;
+    color: #000000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+li a.navactive {
+    background-color: #4CAF50;
+    color: white;
+}
+li a:hover:not(.navactive) {
+    background-color: #555555;
+    color: white;
+}

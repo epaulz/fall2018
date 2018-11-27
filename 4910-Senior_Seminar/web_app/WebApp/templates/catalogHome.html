@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Good Driver Incentive Program</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/css/signup.css" rel="stylesheet">
+    <link href="../static/btn_catalog.css" rel="stylesheet">
+ 
+ 
+</head>
+ 
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link" href="/logout">Log Out</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+ 
+        <div class="jumbotron">
+            <h1>Catalog Home</h1>
+            <p>This page contains the basic catalog sections view and allows user to select one to then bring up the list view of them.</p>
+            
+            <div class="container" style="display:inline">
+                <h1>Movies</h1>
+                <div id="carouselExampleIndicators" class="carousel slide ml-auto mr-auto" data-ride="carousel">
+                    <ol class="carousel-indicators" style="position:relative;background-color:gray;height:10px;">
+                      <li style="margin-top:auto;margin-bottom:auto;" data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li style="margin-top:auto;margin-bottom:auto;" data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <li style="margin-top:auto;margin-bottom:auto;" data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <!-- The following is added to implement row and columns of products per page on the carousel-->
+                      <div class="row" style="padding-left:300px">
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07J2TBSTX&asins=B07J2TBSTX&linkId=7e30c45fcd68f72c3f96baa35f994358&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal">Add to Cart</button></div></div>
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07FK4HHXN&asins=B07FK4HHXN&linkId=ae8e3bac6597cb844dc9f7979bb0a994&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal1">Add to Cart</button></div></div>
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07JDXGJ9Z&asins=B07JDXGJ9Z&linkId=bd8d942f3cc785d9f731f87b3f77a268&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal2">Add to Cart</button></div></div>
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07J5PMDJ7&asins=B07J5PMDJ7&linkId=972176fb56617ffda72d7fda58215d08&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal3">Add to Cart</button></div></div>
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07J253VYL&asins=B07J253VYL&linkId=de6eb258717cf1fd60dd9a2de9a259a0&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal4">Add to Cart</button></div></div>
+                      </div>
+                    </div>
+                    <!--NEED TO APPLY THE MULTI COLUMN SYSTEM TO ALL IFRAMES AND SOMEHOW CENTER THE COLUMNS IN THE CONTAINER-->
+                    <div class="carousel-item">
+                        <div class="row" style="padding-left:300px">
+                            <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07H9KG2PB&asins=B07H9KG2PB&linkId=b49b381bf7fe237e64316f141ee6fda8&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                            </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal5">Add to Cart</button></div></div>
+                            <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07J1V4D3W&asins=B07J1V4D3W&linkId=de0da1a83c34366f49afad617a7a999e&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                            </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal6">Add to Cart</button></div></div>
+                            <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07FVP5LSK&asins=B07FVP5LSK&linkId=883e3a11aa21e94a5dff6f4ce2128f8e&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                            </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal7">Add to Cart</button></div></div>
+                            <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07FVDL5BB&asins=B07FVDL5BB&linkId=79ed84b3d6002a52aa23fbe1b688814a&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                            </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal8">Add to Cart</button></div></div>
+                            <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07H7WPWBY&asins=B07H7WPWBY&linkId=ad8c9053420b3b5fd008c3204ef37500&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                            </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal9">Add to Cart</button></div></div>
+                          </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row" style="padding-left:300px">
+                            <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07GNXKZQM&asins=B07GNXKZQM&linkId=06277bc84995021de2eddf17c9911386&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                            </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal10">Add to Cart</button></div></div>
+                            <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07H9L1Q44&asins=B07H9L1Q44&linkId=5c031ceb9b640d7ce750daa5c01df15c&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                            </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal11">Add to Cart</button></div></div>
+                            <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07GDVFCFC&asins=B07GDVFCFC&linkId=f86d18a3e2ce626d8b356a21792122dd&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                            </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal12">Add to Cart</button></div></div>
+                            <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07HHVN814&asins=B07HHVN814&linkId=59e2b00d9e7246d613d3e29a50bbde2f&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                            </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal13">Add to Cart</button></div></div>
+                            <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B06Y5PLSTY&asins=B06Y5PLSTY&linkId=fb4ee92ccb243ac16579628ba4f66c8f&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                            </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal14">Add to Cart</button></div></div>
+                          </div>
+                    </div>
+                  </div>
+                    <a class="carousel-control-prev ml-auto mr-auto" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color:gray"></span>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next ml-auto mr-auto" href="#carouselExampleIndicators" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true" style="background-color:gray"></span>
+                      <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+
+        <div class="container" style="display:inline">
+            <h1>Books</h1>
+            <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators" style="position:relative;background-color:gray;height:10px;">
+                  <li style="margin-top:auto;margin-bottom:auto;" data-target="#carouselExampleIndicators2" data-slide-to="0" class="active"></li>
+                  <li style="margin-top:auto;margin-bottom:auto;" data-target="#carouselExampleIndicators2" data-slide-to="1"></li>
+                  <li style="margin-top:auto;margin-bottom:auto;" data-target="#carouselExampleIndicators2" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <!-- The following is added to implement row and columns of products per page on the carousel-->
+                  <div class="row" style="padding-left:300px">
+                    <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=1982121084&asins=1982121084&linkId=471a798b96c685a7108eded925bcc19c&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                    </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal15">Add to Cart</button></div></div>
+                    <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=0545261244&asins=0545261244&linkId=3d8bba2adaa9cc67a540c07d455d1e87&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                    </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal16">Add to Cart</button></div></div>
+                    <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=1400201659&asins=1400201659&linkId=f0ded50e39cfeadd6ea1e8a6397831f5&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                    </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal17">Add to Cart</button></div></div>
+                    <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=0385544154&asins=0385544154&linkId=2dbddef3bd4ec7db65bff1a211a0207e&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                    </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal18">Add to Cart</button></div></div>
+                    <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=0374201234&asins=0374201234&linkId=cade343b3bcbf06e2cac4b91dc74342b&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                    </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal19">Add to Cart</button></div></div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row" style="padding-left:300px">
+                      <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=1501183664&asins=1501183664&linkId=0d86940b5c9472750715ce682bab1185&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal20">Add to Cart</button></div></div>
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=0399592520&asins=0399592520&linkId=22c693a0a5c82aa7ddca2624c7bc0c50&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal21">Add to Cart</button></div></div>
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=1939457718&asins=1939457718&linkId=c7dee0ef49d3c447f48c3ccea596065e&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal22">Add to Cart</button></div></div>
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=1501175513&asins=1501175513&linkId=e1fcbd3d91b547778484530f66b6b2e5&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal23">Add to Cart</button></div></div>
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=0316421820&asins=0316421820&linkId=5f94a2781a7ce26f90716c98d0772fc8&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal24">Add to Cart</button></div></div>
+                      </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row" style="padding-left:300px">
+                      <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=1538728524&asins=1538728524&linkId=42f3627e4b5c78ec03ee77e36d426e63&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal25">Add to Cart</button></div></div>
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=1984854275&asins=1984854275&linkId=0b11d0ea62c92c35d663c3d04c4f419e&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal26">Add to Cart</button></div></div>
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=1419727435&asins=1419727435&linkId=41933aebda121098156ca6cb8181e02a&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal27">Add to Cart</button></div></div>
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=1324002646&asins=1324002646&linkId=713652e4a4ac7606cbced5949327202c&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal28">Add to Cart</button></div></div>
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=0062457713&asins=0062457713&linkId=f0e3969550d005b4b8e04630ea122572&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal29">Add to Cart</button></div></div>
+                      </div>
+                </div>
+              </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color:gray"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators2" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true" style="background-color:gray"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="container" style="display:inline;">
+            <h1>Music</h1>
+            <div id="carouselExampleIndicators3" class="carousel slide ml-auto mr-auto" data-ride="carousel">
+                <ol class="carousel-indicators" style="position:relative;background-color:gray;height:10px;">
+                  <li style="margin-top:auto;margin-bottom:auto;" data-target="#carouselExampleIndicators3" data-slide-to="0" class="active"></li>
+                  <li style="margin-top:auto;margin-bottom:auto;" data-target="#carouselExampleIndicators3" data-slide-to="1"></li>
+                  <li style="margin-top:auto;margin-bottom:auto;" data-target="#carouselExampleIndicators3" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <!-- The following is added to implement row and columns of products per page on the carousel-->
+                  <div class="row" style="padding-left:300px">
+                    <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07GCBS6JP&asins=B07GCBS6JP&linkId=7937f6a8f394bb640547f1cf4371ebf3&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                    </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal30">Add to Cart</button></div></div>
+                    <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07GWJMW22&asins=B07GWJMW22&linkId=dd85770896206764d82823a200a55bdf&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                    </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal31">Add to Cart</button></div></div>
+                    <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07H45L411&asins=B07H45L411&linkId=0640c47ff029c1d225c52b0466b29153&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                    </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal32">Add to Cart</button></div></div>
+                    <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07HFKFP35&asins=B07HFKFP35&linkId=77bce5d667c9e795fd3a4025bcd126f0&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                    </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal33">Add to Cart</button></div></div>
+                    <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07FCZ6VHJ&asins=B07FCZ6VHJ&linkId=d2422912b6c6dc1041043e76192f20e4&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                    </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal34">Add to Cart</button></div></div>
+                    
+                  </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row" style="padding-left:300px">
+                      <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B076Q58K3T&asins=B076Q58K3T&linkId=e4ac46352e62debd5de009439aa84b01&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal35">Add to Cart</button></div></div>
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07GZB6MHY&asins=B07GZB6MHY&linkId=685215b7dc71f12f599b7688e5d58ba8&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal36">Add to Cart</button></div></div>
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07HHMFMTD&asins=B07HHMFMTD&linkId=f10116a3be4eef7968cbd383d10ec820&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal37">Add to Cart</button></div></div>
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07HR3BWPL&asins=B07HR3BWPL&linkId=10fab370a6a9c14691e8ad434dac3626&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal38">Add to Cart</button></div></div>
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07JMHYYZW&asins=B07JMHYYZW&linkId=dd138867c0553aa4651a63a1ef61e048&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal39">Add to Cart</button></div></div>
+                        
+                      </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row" style="padding-left:300px">
+                      <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07FKTQHXJ&asins=B07FKTQHXJ&linkId=56a83ab920e2cfa38f443704fda82803&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal40">Add to Cart</button></div></div>
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07HFKKYJG&asins=B07HFKKYJG&linkId=b8535a2c61ab142fedf5634315257cff&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal41">Add to Cart</button></div></div>
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07GZP3V9T&asins=B07GZP3V9T&linkId=da6abc97a25c44103fd7c3fd8cf20081&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal42">Add to Cart</button></div></div>
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B07J5Q4PT6&asins=B07J5Q4PT6&linkId=57febc2f1f35772a364b71d22b8f853b&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal43">Add to Cart</button></div></div>
+                        <div class="col-sm-2"><div class="col-sm-3"><iframe style="width:120px;height:240px;" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" src="//ws-na.amazon-adsystem.com/widgets/q?ServiceVersion=20070822&OneJS=1&Operation=GetAdHtml&MarketPlace=US&source=ac&ref=tf_til&ad_type=product_link&tracking_id=cpsc4910a-20&marketplace=amazon&region=US&placement=B01MS6IM0X&asins=B01MS6IM0X&linkId=389de9e3ef75f209dd899d673dc60c42&show_border=true&link_opens_in_new_window=false&price_color=333333&title_color=0066c0&bg_color=ffffff">
+                        </iframe><button class="btn btn-sm btn-primary" type="button" data-toggle="modal" data-target="#myModal44">Add to Cart</button></div></div>
+                        
+                      </div>
+                </div>
+              </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators3" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true" style="background-color:gray"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators3" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true" style="background-color:gray"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 20</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 20</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal2">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 15</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal3">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 15</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal4">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 15</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal5">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 15</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal6">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 15</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal7">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 20</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal8">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 20</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal9">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 20</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal10">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 15</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal11">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 20</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal12">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 15</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal13">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 20</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal14">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 15</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal15">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 9</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal16">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 5</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal17">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 14</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal18">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 14</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal19">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 21</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal20">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 17</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal21">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 17</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal22">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 19</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal23">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 17</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal24">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 18</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal25">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 14</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal26">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 14</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal27">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 8</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal28">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 16</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal29">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 15</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal30">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 12</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal31">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 13</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal32">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 9</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal33">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 1</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal34">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 1</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal35">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 9</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal36">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 9</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal37">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 9</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal38">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 1</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal39">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 1</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal40">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 9</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal41">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 9</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal42">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 10</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal43">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 10</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="myModal44">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Points Cost: 1</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" onclick="window.location.href='/checkout'">Checkout</button>
+          </div>
+        </div>
+      </div>
+    </div>
+ 
+    
+        <footer class="footer">
+            &copy; Watt Team 6 - 2018
+        </footer>
+ 
+      </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+</body>
+
+
+ 
+</html>

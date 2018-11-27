@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <title>Good Driver Incentive Program</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ 
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+    <link href="../static/css/signup.css" rel="stylesheet">
+ 
+ 
+</head>
+ 
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="/userHome">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                    <a class="nav-link" href="/logout">Log Out</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Dropdown
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+            </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+ 
+        <div id = "content" class="site-content"role="main">
+ 
+        </div>
+
+        <center>
+        <div style= "margin-left: 30%; margin-right: 30%;">
+            <br>
+        <h2>Add a Driver</h2>
+        <p>Enter a Driver's Email address and your Company Name to register the Driver</p>
+        <form class="form-group" action="/addEmployee" method="post">
+            <label for="inputDriver" class="sr-only">Driver</label>
+            <input type="text" name="inputDriver" id="inputDriver" class="form-control" placeholder="Driver's Email" required autofocus>
+            <label for="inputCompany" class="sr-only">Company</label>
+            <input type="text" name="inputCompany" id="inputCompany" class="form-control" placeholder="Company Name" required autofocus>
+            <button id="btnSignIn" class="btn btn-lg btn-primary btn-block" type="submit">Register</button>                   
+        </form>
+        </div>    
+        </center>
+
+        <center>
+            <div style= "margin-left: 30%; margin-right: 30%;">
+                <br>
+            <h2>Give a Driver Points</h2>
+            <form class="form-group" action="/updatePoints" method="post">
+                <label for="inputDriver" class="sr-only">Driver</label>
+                <input type="text" name="inputDriver" id="inputDriver" class="form-control" placeholder="Driver's Email" required autofocus>
+                <label for="inputCompany" class="sr-only">Company</label>
+                <input type="text" name="inputCompany" id="inputCompany" class="form-control" placeholder="Company Name" required autofocus>
+                <label for="inputPoints" class="sr-only">Points</label>
+                <input type="text" name="inputPoints" id="inputPoints" class="form-control" placeholder="Points to Give" required autofocus>
+                <button id="btnSignIn" class="btn btn-lg btn-primary btn-block" type="submit">Submit</button>                   
+        </form>
+        </div>    
+        </center>
+        
+        <center>
+            <div style= "margin-left: 30%; margin-right: 30%;">
+                <br>
+            <h2>Remove a Driver</h2>
+            <p>Enter a Driver's Email address and your Company Name to remove the Driver</p>
+            <form class="form-group" action="/dropEmployee" method="post">
+                <label for="inputDriver" class="sr-only">Driver</label>
+                <input type="text" name="inputDriver" id="inputDriver" class="form-control" placeholder="Driver's Email" required autofocus>
+                <label for="inputCompany" class="sr-only">Company</label>
+                <input type="text" name="inputCompany" id="inputCompany" class="form-control" placeholder="Company Name" required autofocus>
+                <button id="btnSignIn" class="btn btn-lg btn-primary btn-block" type="submit">Remove</button>                   
+            </form>
+            </div>    
+        </center>
+
+        <center>
+            <div style= "margin-left: 30%; margin-right: 30%;">
+                <br>
+            <h2>Update Your Point Weight</h2>
+            <p>Enter your Company Name and a new Point Weight to update the value</p>
+            <form class="form-group" action="/updatePW" method="post">
+                <label for="inputName" class="sr-only">Company</label>
+                <input type="text" name="inputName" id="inputName" class="form-control" placeholder="Company Name" required autofocus>
+                <label for="inputPW" class="sr-only">New Point Weight</label>
+                <input type="text" name="inputPW" id="inputPW" class="form-control" placeholder="New Point Weight" required autofocus>
+                <button id="btnSignIn" class="btn btn-lg btn-primary btn-block" type="submit">Update</button>                   
+            </form>
+            </div>    
+        </center>
+        
+                                           
+                    </div>
+                        
+                       
+                           
+         </center>
+        
+       
+       </form>
+        
+        <center>
+        <div style= "margin-left: 30%; margin-right: 30%;">
+        <br>
+        <br>
+        <br>
+        <h2> Account Deletion </h2>
+        <p>Enter your email address and password to delete your account.</p>
+
+            <form class="form-signin" action="/deleteAcct" method="post">
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+            <br>
+            <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="submit">Delete account</button>
+            </form>
+        </div>
+    </center>
+
+                
+</center>
+            <footer class="footer">
+            &copy; Watt Team 6 - 2018
+        </footer>
+ 
+    </div>
+</body>
+ 
+</html>

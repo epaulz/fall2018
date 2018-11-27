@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <table>
+        {% for elem in data %}
+            {% for key in elem %}
+                <tr>
+                    <td>{{elem[key]}}</td>
+                </tr>
+            {% endfor %}
+        {% endfor %}
+        </table>
+</html>

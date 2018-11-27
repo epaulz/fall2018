@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <title>Good Driver Incentive Program</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+            
+            <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+                <link href="../static/css/signup.css" rel="stylesheet">
+                    
+                    
+    </head>
+    
+    
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/userHome">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/logout">Log Out</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+            </div>
+        </nav>
+        
+        <div id = "content" class="site-content"role="main">
+            
+        </div>
+        <form class="form-save" action="/updatedprofSettings" method="post">
+            
+            <div style= "margin-left: 30%; margin-right: 30%;">
+                <center>
+                    <h2> Profile Settings</h2>
+                    <p>Edit your basic profile information here.</p>
+                    
+                    
+                    <label for="inputName" class="sr-only">Name</label>
+                    <input type="name" name="inputName" id="inputName" class="form-control" placeholder="Name" required autofocus>
+                        
+                    <label for="inputEmail" class="sr-only">Email address</label>
+                    <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                    <label for="inputPhone" class="sr-only">Phone</label>
+                    <input type="phone" name="inputPhone" id="inpuPhone" class="form-control" placeholder="Phone" required autofocus>
+                    <label for="inputProfession" class="sr-only">Profession</label>
+                    <input type="profession" name="inputProfession" id="inputProfession" class="form-control" placeholder="Profession" required autofocus>
+                                    
+                                    <div style= "margin-left: 200px; margin-right: 200px;">
+                                        <label> Gender </label>
+                                    </div>
+                                    <div style= "margin-left: 200px; margin-right: 200px;" >
+                                        <input type="radio" name="gender" value="male" />Male
+                                        
+                                        <input type="radio" name="gender" value="female" />Female
+                                        
+                                        
+                                        
+                                    </div>
+                                    </div>
+            
+            
+            
+            </center>
+            
+            <div>
+                <center>
+                    <h2> Settings </h2>
+                </center>
+                <center>
+                    <div style= "margin-left: 200px; margin-right: 200px;">
+                        <label> Notification </label>
+                    </div>
+                    <div style= "margin-left: 200px; margin-right: 200px;" >
+                        <input type="radio" name="answer" value="yes"> Yes<br>
+                            <input type="radio" name="answer" value="no"> No<br>
+                                
+                                </div>
+                </center>
+
+                <div style= "margin-left: 200px; margin-right: 200px;">
+                    
+                    <button id="btnSignIn" class="btn btn-lg btn-primary btn-block" type="submit">Saved</button>
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+        </form>
+        
+        <center>
+            <div style= "margin-left: 200px; margin-right: 200px;">
+                <h2> Account Deletion </h2>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" name="inputEmail" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+                
+                
+            <label for="inputPassword" class="sr-only">Confirm Password</label>
+            <input type="password" name="inputPassword" id="inputPassword" class="form-control" placeholder="Password" required>
+                
+                
+            <button id="btnSignUp" class="btn btn-lg btn-primary btn-block" type="button">Delete account</button>
+            </div>
+        <div>
+            </center>
+            
+            <footer class="footer">
+                &copy; Watt Team 6 - 2018
+            </footer>
+            
+        </div>
+    </body>
+    
+</html>
+
