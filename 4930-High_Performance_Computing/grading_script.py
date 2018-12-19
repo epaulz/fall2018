@@ -1,13 +1,16 @@
 # ECE 4930
 
-my_grades = {"exams":[],
-						"final":[],
-						"sessions":[],
-						"lab_exam":[]}
+my_grades = {"project":[73.0],
+					   "hw":[72.81],
+					   "paper":[69.07],
+					   "pres":[76.19],
+					   "participation":[100.0],
+					   "lecture":[92.0],
+					   "final":[79.43]}
 
-class_grades = {"hw_and_quizzes":[36.5,56.0,44.0,42.0],
-						  "tests":[46.0,45.6],
-						  "final":[50.0]}
+#class_grades = {"hw_and_quizzes":[36.5,56.0,44.0,42.0],
+#						  "tests":[46.0,45.6],
+#						  "final":[50.0]}
 	  
 
 def average(numbers):
@@ -16,11 +19,14 @@ def average(numbers):
 	return total
 	
 def get_average(x):
-	exams = average(my_grades["exams"])
+	project = average(my_grades["project"])
+	hw = average(my_grades["hw"])
+	paper = average(my_grades["paper"])
+	pres = average(my_grades["pres"])
+	part = average(my_grades["participation"])
+	lecture = average(my_grades["lecture"])
 	final = average(my_grades["final"])
-	sessions = average(my_grades["sessions"])
-	lab_exam = average(my_grades["lab_exam"])
-	return exams*.60 + final*.25 + sessions*.10 + lab_exam*.05
+	return project*.20+hw*.15+paper*.05+pres*.05+part*.10+lecture*.25+final*.20
 
 	
 def get_letter_grade(score):
@@ -37,4 +43,4 @@ def get_letter_grade(score):
 
 print "ECE 4930 - HPC Fault Tolerance"
 print "Current grade: %s (%s)" % (get_letter_grade(get_average(my_grades)), get_average(my_grades))
-print "Class average: %s (%s)" % (get_letter_grade(get_average(class_grades)), get_average(class_grades))
+#print "Class average: %s (%s)" % (get_letter_grade(get_average(class_grades)), get_average(class_grades))
